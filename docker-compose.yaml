@@ -1,7 +1,7 @@
 version: "3.8"
 
 services:
-  comic:
+  wilayah:
     container_name: wilayah-rest-api
     image: wilayah-rest-api
     restart: on-failure
