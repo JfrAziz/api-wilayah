@@ -2,15 +2,15 @@ version: "3.8"
 
 services:
   comic:
-    container_name: comic-rest-api
-    image: comic-rest-api
+    container_name: wilayah-rest-api
+    image: wilayah-rest-api
     restart: on-failure
     ports: 
       - "3000:3000"
     depends_on: 
       - mysql
     networks:
-      - comic-networks
+      - wilayah-networks
     environment: 
       - PORT=3000
       - HOST=mysql
@@ -29,7 +29,7 @@ services:
     volumes:
       - ./database/dump.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
-      - comic-networks  
+      - wilayah-networks  
 networks:
-  comic-networks:
-    name: comic-networks 
+  wilayah-networks:
+    name: wilayah-networks 
